@@ -255,17 +255,24 @@
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
     <p>cooike和session的一些学习笔记 我还没写（xue）完</p>
 <a id="more"></a>
-<h2 id="1-cookie简介"><a href="#1-cookie简介" class="headerlink" title="1.cookie简介"></a>1.cookie简介</h2><h4 id="1-1-cookie简介"><a href="#1-1-cookie简介" class="headerlink" title="1.1 cookie简介"></a>1.1 cookie简介</h4><p>cookie是一种进行网络会话状态跟踪的技术。</p>
+<h2 id="1-cookie"><a href="#1-cookie" class="headerlink" title="1.cookie"></a>1.cookie</h2><h4 id="1-1-cookie简介"><a href="#1-1-cookie简介" class="headerlink" title="1.1 cookie简介"></a>1.1 cookie简介</h4><p>cookie是一种进行网络会话状态跟踪的技术。</p>
 <p>会话由一组请求与响应组成，是围绕一件事情所进行的请求与响应，所以这些请求与响应之间是需要由数据传递的。但是HTTP协议是一种无状态协议（这一次的请求和响应与下一次没有任何关系，这一次的数据下一次获取不到），需要进行会话状态跟踪。=&gt;cookie</p>
-<p><strong>cookie是由服务器生成，保存在客户端的一种信息载体。</strong>这个载体中存放着用户访问该站点的会话状态信息。</p>
-<p>用户在提交第一次请求后，服务器生成cookie并将其封装到响应头（Response Header）中，以响应的形式发送给客户端。客户端接收到这个响应后，将cookie保存。当客户端再次发送同类请求后，在请求中会携带保存在客户端的cookie数据，发送到服务端，由服务器对会话进行跟踪。</p>
+<p> <strong>cookie是由服务器生成，保存在客户端的一种信息载体。</strong>这个载体中存放着用户访问该站点的会话状态信息。</p>
+<p>  用户在提交第一次请求后，服务器生成cookie并将其封装到响应头（Response Header）中，以响应的形式发送给客户端。客户端接收到这个响应后，将cookie保存。当客户端再次发送同类请求后，在请求中会携带保存在客户端的cookie数据，发送到服务端，由服务器对会话进行跟踪。</p>
 <p>cookie由若干键值对构成。</p>
-<h2 id="2-session简介"><a href="#2-session简介" class="headerlink" title="2.session简介"></a>2.session简介</h2><h4 id="2-1-session简介"><a href="#2-1-session简介" class="headerlink" title="2.1 session简介"></a>2.1 session简介</h4><p>session是一种会话状态跟踪技术。</p>
-<p>什么是“会话”=&gt;(用户能感知到的）当用户打开浏览器，从发出第一次请求开始，一直到最终关闭浏览器，表示一次会话完成。</p>
+<h2 id="2-session"><a href="#2-session" class="headerlink" title="2.session"></a>2.session</h2><h4 id="2-1-session简介"><a href="#2-1-session简介" class="headerlink" title="2.1 session简介"></a>2.1 session简介</h4><p>session是一种会话状态跟踪技术。</p>
+<p>什么是“会话”</p>
+<p>=&gt;(用户能感知到的）当用户打开浏览器，从发出第一次请求开始，一直到最终关闭浏览器，表示一次会话完成。</p>
+<p>=&gt;(对于客户端来说)从第一次请求到session失效，会话结束。</p>
 <h4 id="2-2-session的工作原理"><a href="#2-2-session的工作原理" class="headerlink" title="2.2 session的工作原理"></a>2.2 session的工作原理</h4><p>在服务器中系统会为每个会话创建一个session对象。不同的会话对应不同的session，系统是如何做到在同一个会话过程中，一直使用的是同一个session对象呢？</p>
-<h5 id="2-2-1-写入session列表"><a href="#2-2-1-写入session列表" class="headerlink" title="2.2.1 写入session列表"></a>2.2.1 写入session列表</h5><p>当用户第一次提交请求时，服务端自动生成一个键值对——key为一个32位长度的随机字符串，称为JSessionID，value为新创建的HttpSession对象。</p>
+<h5 id="2-2-1-写入session列表"><a href="#2-2-1-写入session列表" class="headerlink" title="2.2.1 写入session列表"></a>2.2.1 写入session列表</h5><p>当用户第一次提交请求时，服务端servlet中执行到request.getSession()方法后，会自动生成一个键值对——key为一个32位长度的随机字符串，称为JSessionID，value为新创建的HttpSession对象。</p>
 <h5 id="2-2-2-服务器生成并发送cookie"><a href="#2-2-2-服务器生成并发送cookie" class="headerlink" title="2.2.2 服务器生成并发送cookie"></a>2.2.2 服务器生成并发送cookie</h5><p>系统自动将“JSessionID”作为name，32位长度的随机串作为value，以cookie的形式放到响应头中，伴随响应将其发送到客户端。</p>
-<h5 id="2-2-3-客户端接收并发送cookie"><a href="#2-2-3-客户端接收并发送cookie" class="headerlink" title="2.2.3 客户端接收并发送cookie"></a>2.2.3 客户端接收并发送cookie</h5><h5 id="2-2-4-从session列表中查找"><a href="#2-2-4-从session列表中查找" class="headerlink" title="2.2.4 从session列表中查找"></a>2.2.4 从session列表中查找</h5><h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h2><table>
+<h5 id="2-2-3-客户端接收并发送cookie"><a href="#2-2-3-客户端接收并发送cookie" class="headerlink" title="2.2.3 客户端接收并发送cookie"></a>2.2.3 客户端接收并发送cookie</h5><p>客户端接收到这个cookie后会将其存放到浏览器的缓存中。只要浏览器不关，缓存中的cookie就不会消失。<br>当用户第二次提交请求时，会将这个cookie伴随请求头信息一起发给服务器。</p>
+<h5 id="2-2-4-从session列表中查找"><a href="#2-2-4-从session列表中查找" class="headerlink" title="2.2.4 从session列表中查找"></a>2.2.4 从session列表中查找</h5><p>服务端从请求中读取到客户端发来的cookie，根据cookie的JSessionID的值，从map中查找相对应的value，即session对象。然后对该session对象的域属性进行读写操作。</p>
+<h4 id="2-3-session的失效"><a href="#2-3-session的失效" class="headerlink" title="2.3 session的失效"></a>2.3 session的失效</h4><p>默认session的超时时间为30分钟，<strong>从最后一次访问开始计时</strong>。</p>
+<h4 id="2-4-cookie禁用后的session"><a href="#2-4-cookie禁用后的session" class="headerlink" title="2.4 cookie禁用后的session"></a>2.4 cookie禁用后的session</h4><p>拿到JSessionID将其放到地址里，所以有些网站为了保证安全性，要求必须打开cookie。（不然你的JSessionID明文显示在地址栏里被别人拿到就不好了</p>
+<h2 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h2><p>（这个表格怎么可以这么丑 等我闲了就过来自己写好吧）</p>
+<table>
 <thead>
 <tr>
 <th align="center">方面</th>
@@ -284,7 +291,7 @@
 </tr>
 <tr>
 <td align="center">特点</td>
-<td align="center">随请求头每次提交，可长时间保存</td>
+<td align="center">随请求头每次提交</td>
 <td align="center">不随请求头提交，可长时间保存</td>
 <td align="center">不随请求头提交，页面关闭即失效</td>
 <td align="center">安全</td>
@@ -326,7 +333,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/04/01/cookie%E5%92%8Csession-1/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-cookie简介"><span class="toc-number">1.</span> <span class="toc-text">1.cookie简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-cookie简介"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.1 cookie简介</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-session简介"><span class="toc-number">2.</span> <span class="toc-text">2.session简介</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-session简介"><span class="toc-number">2.0.1.</span> <span class="toc-text">2.1 session简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-session的工作原理"><span class="toc-number">2.0.2.</span> <span class="toc-text">2.2 session的工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-写入session列表"><span class="toc-number">2.0.2.1.</span> <span class="toc-text">2.2.1 写入session列表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-2-服务器生成并发送cookie"><span class="toc-number">2.0.2.2.</span> <span class="toc-text">2.2.2 服务器生成并发送cookie</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-3-客户端接收并发送cookie"><span class="toc-number">2.0.2.3.</span> <span class="toc-text">2.2.3 客户端接收并发送cookie</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-4-从session列表中查找"><span class="toc-number">2.0.2.4.</span> <span class="toc-text">2.2.4 从session列表中查找</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-总结"><span class="toc-number">3.</span> <span class="toc-text">3.总结</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-cookie"><span class="toc-number">1.</span> <span class="toc-text">1.cookie</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-cookie简介"><span class="toc-number">1.0.1.</span> <span class="toc-text">1.1 cookie简介</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-session"><span class="toc-number">2.</span> <span class="toc-text">2.session</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-session简介"><span class="toc-number">2.0.1.</span> <span class="toc-text">2.1 session简介</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-session的工作原理"><span class="toc-number">2.0.2.</span> <span class="toc-text">2.2 session的工作原理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-1-写入session列表"><span class="toc-number">2.0.2.1.</span> <span class="toc-text">2.2.1 写入session列表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-2-服务器生成并发送cookie"><span class="toc-number">2.0.2.2.</span> <span class="toc-text">2.2.2 服务器生成并发送cookie</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-3-客户端接收并发送cookie"><span class="toc-number">2.0.2.3.</span> <span class="toc-text">2.2.3 客户端接收并发送cookie</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-2-4-从session列表中查找"><span class="toc-number">2.0.2.4.</span> <span class="toc-text">2.2.4 从session列表中查找</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-session的失效"><span class="toc-number">2.0.3.</span> <span class="toc-text">2.3 session的失效</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-cookie禁用后的session"><span class="toc-number">2.0.4.</span> <span class="toc-text">2.4 cookie禁用后的session</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-总结"><span class="toc-number">3.</span> <span class="toc-text">3.总结</span></a></li></ol>
       </li>
     </ul>
   </div>
