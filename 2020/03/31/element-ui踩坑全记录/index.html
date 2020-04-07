@@ -197,7 +197,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-03-31
+      更新于:&nbsp;2020-04-05
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -261,7 +261,11 @@
 
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <h3 id="1-el-input中绑定-keydown-enter-”goSearch”不起作用"><a href="#1-el-input中绑定-keydown-enter-”goSearch”不起作用" class="headerlink" title="1. el-input中绑定@keydown.enter=”goSearch”不起作用"></a><strong>1. el-input中绑定@keydown.enter=”goSearch”不起作用</strong></h3><p>解决方法：<code>@keydown.enter.native=&quot;goSearch&quot;</code></p>
+    <p>使用element ui时遇到的一些小问题与解决方法记录。（element ui事儿好多<a id="more"></a></p>
+<h3 id="1-el-input中绑定-keydown-enter-”goSearch”不起作用"><a href="#1-el-input中绑定-keydown-enter-”goSearch”不起作用" class="headerlink" title="1. el-input中绑定@keydown.enter=”goSearch”不起作用"></a><strong>1. el-input中绑定@keydown.enter=”goSearch”不起作用</strong></h3><p>解决方法：<code>@keydown.enter.native=&quot;goSearch&quot;</code></p>
+<h3 id="2-el-input自动获取焦点"><a href="#2-el-input自动获取焦点" class="headerlink" title="2. el-input自动获取焦点"></a><strong>2. el-input自动获取焦点</strong></h3><p>解决方法：在<code>el-input</code>标签上加入<code>ref</code>属性，然后在需要的地方直接调用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-input</span><br><span class="line">       placeholder&#x3D;&quot;Search&quot;</span><br><span class="line">       v-model&#x3D;&quot;searchKey&quot;</span><br><span class="line">       class&#x3D;&quot;input-with-select&quot;</span><br><span class="line">       ref&#x3D;&quot;input&quot;</span><br><span class="line">       @keydown.enter.native&#x3D;&quot;goSearch&quot;</span><br><span class="line">     &gt;</span><br></pre></td></tr></table></figure>
+<p><code>this.$refs.input.focus()</code></p>
 
   </div>
   <!--文末结束语-->
@@ -296,7 +300,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/03/31/element-ui%E8%B8%A9%E5%9D%91%E5%85%A8%E8%AE%B0%E5%BD%95/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-el-input中绑定-keydown-enter-”goSearch”不起作用"><span class="toc-number">1.</span> <span class="toc-text">1. el-input中绑定@keydown.enter&#x3D;”goSearch”不起作用</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-el-input中绑定-keydown-enter-”goSearch”不起作用"><span class="toc-number">1.</span> <span class="toc-text">1. el-input中绑定@keydown.enter&#x3D;”goSearch”不起作用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-el-input自动获取焦点"><span class="toc-number">2.</span> <span class="toc-text">2. el-input自动获取焦点</span></a></li></ol>
       </li>
     </ul>
   </div>
