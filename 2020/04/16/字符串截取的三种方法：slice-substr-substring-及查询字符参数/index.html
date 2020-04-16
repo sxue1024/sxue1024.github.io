@@ -49,7 +49,7 @@
     
     <title>
         
-            小程序开发中遇到的乱七八糟的问题 | 没有娃娃菜怎么吃火锅
+            字符串截取的三种方法：slice() substr() substring()  | 没有娃娃菜怎么吃火锅
         
     </title>
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -189,19 +189,19 @@
     
     
       <div class="post-header"> 
-  <a class="post-header-title" href="/2020/04/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E9%97%AE%E9%A2%98/">小程序开发中遇到的乱七八糟的问题</a>
+  <a class="post-header-title" href="/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/">字符串截取的三种方法：slice() substr() substring() </a>
   <div class="post-header-meta">
     <span>
       <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-04-14
+      发布于:&nbsp;2020-04-16
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-04-14
+      更新于:&nbsp;2020-04-16
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;
+      分类于:&nbsp;<a class="category-link" href="/categories/JavaScript/">JavaScript</a>
     </span>
     
       <span>
@@ -223,25 +223,25 @@
       <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
       <ul class="mdui-menu" id="share_menu">
         <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=小程序开发中遇到的乱七八糟的问题&url=http://yoursite.com/2020/04/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E9%97%AE%E9%A2%98/&pic=http://yoursite.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=字符串截取的三种方法：slice() substr() substring() &url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/&pic=http://yoursite.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=小程序开发中遇到的乱七八糟的问题&url=http://yoursite.com/2020/04/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E9%97%AE%E9%A2%98/&via=娃娃菜" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=字符串截取的三种方法：slice() substr() substring() &url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/&via=娃娃菜" target="_blank" class="mdui-ripple">分享到 Twitter</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E9%97%AE%E9%A2%98/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=http://yoursite.com/2020/04/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E9%97%AE%E9%A2%98/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+          <a href="https://plus.google.com/share?url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/" target="_blank" class="mdui-ripple">分享到 Google+</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2020/04/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E9%97%AE%E9%A2%98/&title=小程序开发中遇到的乱七八糟的问题" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/&title=字符串截取的三种方法：slice() substr() substring() " target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=没有娃娃菜怎么吃火锅&title=小程序开发中遇到的乱七八糟的问题&summary=嗨！你来啦！这里娃娃菜！一个努力学习前端的程序媛，梦想有一天咸鱼翻身（粘锅（并不&pics=http://yoursite.com/null&url=http://yoursite.com/2020/04/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E9%97%AE%E9%A2%98/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=没有娃娃菜怎么吃火锅&title=字符串截取的三种方法：slice() substr() substring() &summary=嗨！你来啦！这里娃娃菜！一个努力学习前端的程序媛，梦想有一天咸鱼翻身（粘锅（并不&pics=http://yoursite.com/null&url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=http://yoursite.com/2020/04/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E9%97%AE%E9%A2%98/&text=小程序开发中遇到的乱七八糟的问题" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+          <a href="https://telegram.me/share/url?url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/&text=字符串截取的三种方法：slice() substr() substring() " target="_blank" class="mdui-ripple">分享到 Telegram</a>
         </li>
       </ul>
     
@@ -251,24 +251,50 @@
   
   
   
-  <div class="post-tags">
-    
-      <i class="iconfont icon-tag">
-        <a rel="tag" href = /tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/ >小程序</a>
-      </i>
-    
-  </div>
-
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <p>记录小程序学习过程中遇到的小问题</p>
+    <p> slice() substr() substring() 方法的应用与异同 </p>
 <a id="more"></a>
-<h3 id="1-引入vant组件后方法不执行"><a href="#1-引入vant组件后方法不执行" class="headerlink" title="1. 引入vant组件后方法不执行"></a><strong>1. 引入vant组件后方法不执行</strong></h3><p>情景：表单提交，提交按钮用<code>&lt;van-button&gt;</code>就不能执行<code>onSubmit</code>方法，必须用原始的<code>&lt;button&gt;</code>(代码如下是可以正常执行的)，已测试过组件是正常引入的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;form bindsubmit&#x3D;&quot;onSubmit&quot;&gt;</span><br><span class="line">&lt;input name&#x3D;&quot;title&quot;&gt;&lt;&#x2F;input&gt;</span><br><span class="line">&lt;button form-type&#x3D;&quot;submit&quot;  type&#x3D;&quot;primary&quot;&gt;提交&lt;&#x2F;button&gt;</span><br><span class="line">&lt;&#x2F;form&gt;</span><br></pre></td></tr></table></figure>
-<p>原因：查了下文档，人家说</p>
+
+
+<p>红宝书里说：</p>
 <blockquote>
-<p>目前设置了 form-type 的 button 只会对当前组件中的 form 有效。因而，将 button 封装在自定义组件中，而 form 在自定义组件外，将会使这个 button 的 form-type 失效。</p>
+<p>ECMAScript还提供了三个基于子字符串创建新字符串的方法：slice()、substr()和substring()。 这三个方法都会<strong>返回被操作字符串的一个子字符串</strong>，而且也都接受一或两个参数。</p>
 </blockquote>
+<p>重点：<strong>创建新子字符串</strong>，也就是说<strong>不改变原字符串</strong>。</p>
+<h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a>slice()</h3><p>中文：切片</p>
+<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h4><blockquote>
+<p>str.slice(beginIndex[,endIndex])</p>
+</blockquote>
+<p>beginIndex:开始位置，左闭。</p>
+<p>endIndex（可选）:结束位置，右开。若省略，到结尾。</p>
+<p>以上两个数都可以是负值=&gt;负值实际转换成：字符串长度+负值</p>
+<p><strong>以上两个参数必须按照顺序从小到大，否则返回空串。</strong>=&gt;和substring()不一样的地方</p>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var string &#x3D; &quot;娃娃菜今天好好学习了么&quot;</span><br><span class="line">string.length  &#x2F;&#x2F;11</span><br><span class="line">string.slice(3)  &#x2F;&#x2F;&quot;今天好好学习了么&quot;</span><br><span class="line">string.slice(5, 10)  &#x2F;&#x2F;&quot;好好学习了&quot;</span><br><span class="line">string.slice(0, -8) &#x2F;&#x2F;&quot;娃娃菜&quot; endIndex:11-8&#x3D;3</span><br></pre></td></tr></table></figure>
+<h3 id="substring"><a href="#substring" class="headerlink" title="substring()"></a>substring()</h3><h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h4><blockquote>
+<p>str.substring(beginIndex[,endIndex])</p>
+</blockquote>
+<p>beginIndex:开始位置，左闭。</p>
+<p>endIndex（可选）:结束位置，右开。若省略，到结尾。</p>
+<p>以上两个参数都可以是负值=&gt;<strong>负值一律按0处理</strong></p>
+<p><strong>以上两个参数谁小谁当beginIndex</strong></p>
+<h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a>例子</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var string &#x3D; &quot;娃娃菜今天好好学习了么&quot;</span><br><span class="line">string.substring(-1) &#x2F;&#x2F;&quot;娃娃菜今天好好学习了么&quot;</span><br><span class="line">string.substring(-1, -2) &#x2F;&#x2F;&quot;&quot;</span><br><span class="line">string.substring(5, 2) &#x2F;&#x2F;&quot;菜今天&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="substr"><a href="#substr" class="headerlink" title="substr()"></a>substr()</h3><p><strong>前情提要之MDN警告：避免使用，未来可能会被移除掉。</strong></p>
+<h4 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h4><blockquote>
+<p>str.substr(beginIndex[, length])</p>
+</blockquote>
+<p>beginIndex:开始位置，左闭。可以为负值=&gt;负值实际转换成：字符串长度+负值</p>
+<p>length（可选）：提取的字符数.可以为负值=&gt;0</p>
+<h4 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a>例子</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var string &#x3D; &quot;娃娃菜今天好好学习了么&quot;</span><br><span class="line">string.substr(2, 5)  &#x2F;&#x2F;&quot;菜今天好好&quot;</span><br><span class="line">string.substr(-7, 3) &#x2F;&#x2F;&quot;天好好&quot;  beginIndex：11-7&#x3D;4 </span><br><span class="line">string.substr(2, -3) &#x2F;&#x2F;&quot;&quot;  第二个参数不管是负几，得到的都是空串</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
 
   </div>
   <!--文末结束语-->
@@ -281,14 +307,9 @@
   
   <nav>
     
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>字符串截取的三种方法：slice() substr() substring() </span>
-      </a>
     
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/04/01/cookie%E5%92%8Csession-1/">
-        <span>cookie和session</span>
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/04/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E9%97%AE%E9%A2%98/">
+        <span>小程序开发中遇到的乱七八糟的问题</span>
         <i class="iconfont icon-angle-right"></i>
       </a>
     
@@ -302,8 +323,8 @@
     <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
-        <a href="/2020/04/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E9%97%AE%E9%A2%98/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-引入vant组件后方法不执行"><span class="toc-number">1.</span> <span class="toc-text">1. 引入vant组件后方法不执行</span></a></li></ol>
+        <a href="/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/" id="toc-header" class="mdui-ripple">文章目录</a>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#slice"><span class="toc-number">1.</span> <span class="toc-text">slice()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法"><span class="toc-number">1.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子"><span class="toc-number">1.2.</span> <span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#substring"><span class="toc-number">2.</span> <span class="toc-text">substring()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法-1"><span class="toc-number">2.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子-1"><span class="toc-number">2.2.</span> <span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#substr"><span class="toc-number">3.</span> <span class="toc-text">substr()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法-2"><span class="toc-number">3.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子-2"><span class="toc-number">3.2.</span> <span class="toc-text">例子</span></a></li></ol></li></ol>
       </li>
     </ul>
   </div>
