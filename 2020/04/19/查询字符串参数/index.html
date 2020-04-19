@@ -49,7 +49,7 @@
     
     <title>
         
-            字符串截取的三种方法：slice() substr() substring()  | 没有娃娃菜怎么吃火锅
+            查询字符串参数 | 没有娃娃菜怎么吃火锅
         
     </title>
 <meta name="generator" content="Hexo 4.2.0"></head>
@@ -189,11 +189,11 @@
     
     
       <div class="post-header"> 
-  <a class="post-header-title" href="/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/">字符串截取的三种方法：slice() substr() substring() </a>
+  <a class="post-header-title" href="/2020/04/19/%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%82%E6%95%B0/">查询字符串参数</a>
   <div class="post-header-meta">
     <span>
       <span class="iconfont icon-calendar"></span>
-      发布于:&nbsp;2020-04-16
+      发布于:&nbsp;2020-04-19
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
@@ -201,7 +201,7 @@
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
-      分类于:&nbsp;<a class="category-link" href="/categories/JavaScript/">JavaScript</a>
+      分类于:&nbsp;
     </span>
     
       <span>
@@ -223,25 +223,25 @@
       <button class="mdui-btn mdui-btn-icon mdui-text-color-teal" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="iconfont icon-share"></i></button>
       <ul class="mdui-menu" id="share_menu">
         <li class="mdui-menu-item">
-          <a href="http://service.weibo.com/share/share.php?appkey=&title=字符串截取的三种方法：slice() substr() substring() &url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/&pic=http://yoursite.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+          <a href="http://service.weibo.com/share/share.php?appkey=&title=查询字符串参数&url=http://yoursite.com/2020/04/19/%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%82%E6%95%B0/&pic=http://yoursite.com/null&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://twitter.com/intent/tweet?text=字符串截取的三种方法：slice() substr() substring() &url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/&via=娃娃菜" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+          <a href="https://twitter.com/intent/tweet?text=查询字符串参数&url=http://yoursite.com/2020/04/19/%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%82%E6%95%B0/&via=娃娃菜" target="_blank" class="mdui-ripple">分享到 Twitter</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2020/04/19/%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%82%E6%95%B0/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://plus.google.com/share?url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+          <a href="https://plus.google.com/share?url=http://yoursite.com/2020/04/19/%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%82%E6%95%B0/" target="_blank" class="mdui-ripple">分享到 Google+</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/&title=字符串截取的三种方法：slice() substr() substring() " target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://yoursite.com/2020/04/19/%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%82%E6%95%B0/&title=查询字符串参数" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="http://connect.qq.com/widget/shareqq/index.html?site=没有娃娃菜怎么吃火锅&title=字符串截取的三种方法：slice() substr() substring() &summary=嗨！你来啦！这里娃娃菜！一个努力学习前端的程序媛，梦想有一天咸鱼翻身（粘锅（并不&pics=http://yoursite.com/null&url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+          <a href="http://connect.qq.com/widget/shareqq/index.html?site=没有娃娃菜怎么吃火锅&title=查询字符串参数&summary=嗨！你来啦！这里娃娃菜！一个努力学习前端的程序媛，梦想有一天咸鱼翻身（粘锅（并不&pics=http://yoursite.com/null&url=http://yoursite.com/2020/04/19/%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%82%E6%95%B0/" target="_blank" class="mdui-ripple">分享到 QQ</a>
         </li>
         <li class="mdui-menu-item">
-          <a href="https://telegram.me/share/url?url=http://yoursite.com/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/&text=字符串截取的三种方法：slice() substr() substring() " target="_blank" class="mdui-ripple">分享到 Telegram</a>
+          <a href="https://telegram.me/share/url?url=http://yoursite.com/2020/04/19/%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%82%E6%95%B0/&text=查询字符串参数" target="_blank" class="mdui-ripple">分享到 Telegram</a>
         </li>
       </ul>
     
@@ -253,39 +253,16 @@
   
   
   <div class="mdui-card-content mdui-typo mdui-p-x-4">
-    <p>slice() substr() substring() 方法的应用与异同 </p>
+    <p>给定一个携带参数的字符串url，要求将各参数以对象形式显示。</p>
 <a id="more"></a>
 
-
-<p>红宝书里说：</p>
-<blockquote>
-<p>ECMAScript还提供了三个基于子字符串创建新字符串的方法：slice()、substr()和substring()。 这三个方法都会<strong>返回被操作字符串的一个子字符串</strong>，而且也都接受一或两个参数。</p>
-</blockquote>
-<p>重点：<strong>创建新子字符串</strong>，也就是说<strong>不改变原字符串</strong>。</p>
-<h3 id="slice"><a href="#slice" class="headerlink" title="slice()"></a><strong>slice()</strong></h3><p>中文：切片</p>
-<h4 id="语法"><a href="#语法" class="headerlink" title="语法"></a><strong>语法</strong></h4><blockquote>
-<p>str.slice(beginIndex[,endIndex])</p>
-</blockquote>
-<p>beginIndex:开始位置，左闭。</p>
-<p>endIndex（可选）:结束位置，右开。若省略，到结尾。</p>
-<p>以上两个数都可以是负值=&gt;<strong>负值实际转换成：字符串长度+负值</strong>=&gt;和substring()不一样的地方</p>
-<p><strong>以上两个参数必须按照顺序从小到大，否则返回空串。</strong>=&gt;和substring()不一样的地方</p>
-<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a><strong>例子</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var string &#x3D; &quot;娃娃菜今天好好学习了么&quot;</span><br><span class="line">string.length  &#x2F;&#x2F;11</span><br><span class="line">string.slice(3)  &#x2F;&#x2F;&quot;今天好好学习了么&quot;</span><br><span class="line">string.slice(5, 10)  &#x2F;&#x2F;&quot;好好学习了&quot;</span><br><span class="line">string.slice(-11, -8) &#x2F;&#x2F;&quot;娃娃菜&quot; beginIndex:11-11&#x3D;0   endIndex:11-8&#x3D;3</span><br></pre></td></tr></table></figure>
-<h3 id="substring"><a href="#substring" class="headerlink" title="substring()"></a><strong>substring()</strong></h3><h4 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a><strong>语法</strong></h4><blockquote>
-<p>str.substring(beginIndex[,endIndex])</p>
-</blockquote>
-<p>beginIndex:开始位置，左闭。</p>
-<p>endIndex（可选）:结束位置，右开。若省略，到结尾。</p>
-<p>以上两个参数都可以是负值=&gt;<strong>负值一律按0处理</strong></p>
-<p><strong>以上两个参数谁小谁当beginIndex</strong></p>
-<h4 id="例子-1"><a href="#例子-1" class="headerlink" title="例子"></a><strong>例子</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var string &#x3D; &quot;娃娃菜今天好好学习了么&quot;</span><br><span class="line">string.substring(-1) &#x2F;&#x2F;&quot;娃娃菜今天好好学习了么&quot;</span><br><span class="line">string.substring(-1, -2) &#x2F;&#x2F;&quot;&quot;</span><br><span class="line">string.substring(5, 2) &#x2F;&#x2F;&quot;菜今天&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="substr"><a href="#substr" class="headerlink" title="substr()"></a><strong>substr()</strong></h3><p><strong>前情提要之MDN警告：避免使用，未来可能会被移除掉。</strong></p>
-<h4 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a><strong>语法</strong></h4><blockquote>
-<p>str.substr(beginIndex[, length])</p>
-</blockquote>
-<p>beginIndex:开始位置，左闭。可以为负值=&gt;负值实际转换成：字符串长度+负值</p>
-<p>length（可选）：提取的字符数.可以为负值=&gt;0</p>
-<h4 id="例子-2"><a href="#例子-2" class="headerlink" title="例子"></a><strong>例子</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var string &#x3D; &quot;娃娃菜今天好好学习了么&quot;</span><br><span class="line">string.substr(2, 5)  &#x2F;&#x2F;&quot;菜今天好好&quot;</span><br><span class="line">string.substr(-7, 3) &#x2F;&#x2F;&quot;天好好&quot;  beginIndex：11-7&#x3D;4 </span><br><span class="line">string.substr(2, -3) &#x2F;&#x2F;&quot;&quot;  第二个参数不管是负几，得到的都是空串</span><br></pre></td></tr></table></figure>
+<p>涉及到的知识点：</p>
+<p><strong>indexOf()</strong>: 返回调用它的<code>String</code>对象中第一次出现的指定值的索引。若未找到，返回-1 。</p>
+<p><strong>substring()</strong> :返回一个新的子字符串。</p>
+<p><strong>split()</strong> （中文:分裂）:使用指定的分隔符字符串将一个<code>String</code>对象分割成子字符串数组。</p>
+<p><strong>decodeURIComponent()</strong> :用于解码由<code>encodeURIComponent</code>方法或其他类似方法编码的部分统一资源标识符（URI）。</p>
+<p>完整代码👇</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;title&gt;查询字符串参数&lt;&#x2F;title&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">&#x2F;&#x2F;    url字符串：https:&#x2F;&#x2F;github.com&#x2F;search?p&#x3D;3&amp;q&#x3D;xdu&amp;type&#x3D;Repositories</span><br><span class="line">&#x2F;&#x2F;     &#123;p:3,q:xdu,type:Repositories&#125;</span><br><span class="line">var queryString &#x3D; &quot;https:&#x2F;&#x2F;github.com&#x2F;search?p&#x3D;3&amp;q&#x3D;xdu&amp;type&#x3D;Repositories&quot;</span><br><span class="line">&#x2F;&#x2F; qs返回索引25</span><br><span class="line">var qs &#x3D; queryString.indexOf(&quot;?&quot;)</span><br><span class="line">&#x2F;&#x2F;截取字符串 从qs+1开始 也就是截取？之后的字符串</span><br><span class="line">&#x2F;&#x2F;subString()方法不改变原字符串</span><br><span class="line">var newqs &#x3D; queryString.substring(qs+1)</span><br><span class="line">console.log(newqs)  &#x2F;&#x2F;&quot;p&#x3D;3&amp;q&#x3D;xdu&amp;type&#x3D;Repositories&quot;</span><br><span class="line">&#x2F;&#x2F;保存数据的对象</span><br><span class="line">var args &#x3D; &#123;&#125;</span><br><span class="line">&#x2F;&#x2F;取得每一项 items数组</span><br><span class="line">var items &#x3D; newqs.length ? newqs.split(&quot;&amp;&quot;) : []</span><br><span class="line">console.log(items)  &#x2F;&#x2F;[&quot;p&#x3D;3&quot;, &quot;q&#x3D;xdu&quot;, &quot;type&#x3D;Repositories&quot;]</span><br><span class="line">for(let i &#x3D; 0; i &lt; items.length; i++)&#123;</span><br><span class="line">    var item &#x3D; items[i].split(&quot;&#x3D;&quot;)</span><br><span class="line">    &#x2F;&#x2F;解码</span><br><span class="line">    var key &#x3D;decodeURIComponent(item[0]) </span><br><span class="line">    var value &#x3D;decodeURIComponent(item[1]) </span><br><span class="line">    if(key.length)&#123;</span><br><span class="line">        args[key] &#x3D; value </span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">console.log(args)   &#x2F;&#x2F;&#123;p: &quot;3&quot;, q: &quot;xdu&quot;, type: &quot;Repositories&quot;&#125;</span><br><span class="line"></span><br><span class="line">  &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
   </div>
   <!--文末结束语-->
   
@@ -297,14 +274,9 @@
   
   <nav>
     
-      <a rel="prev" class="post-nav-item mdui-float-left" href="/2020/04/19/%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%82%E6%95%B0/">
-        <i class="iconfont icon-angle-left"></i>
-        <span>查询字符串参数</span>
-      </a>
     
-    
-      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/04/14/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%BC%80%E5%8F%91%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B9%B1%E4%B8%83%E5%85%AB%E7%B3%9F%E7%9A%84%E9%97%AE%E9%A2%98/">
-        <span>小程序开发中遇到的乱七八糟的问题</span>
+      <a rel="next" class="post-nav-item mdui-float-right" href="/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/">
+        <span>字符串截取的三种方法：slice() substr() substring() </span>
         <i class="iconfont icon-angle-right"></i>
       </a>
     
@@ -318,8 +290,8 @@
     <button class="mdui-fab mdui-ripple mdui-color-teal" mdui-menu="{target: '#toc'}"><i class="iconfont icon-list"></i></button>
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
-        <a href="/2020/04/16/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%AA%E5%8F%96%E7%9A%84%E4%B8%89%E7%A7%8D%E6%96%B9%E6%B3%95%EF%BC%9Aslice-substr-substring-%E5%8F%8A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E5%8F%82%E6%95%B0/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#slice"><span class="toc-number">1.</span> <span class="toc-text">slice()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法"><span class="toc-number">1.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子"><span class="toc-number">1.2.</span> <span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#substring"><span class="toc-number">2.</span> <span class="toc-text">substring()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法-1"><span class="toc-number">2.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子-1"><span class="toc-number">2.2.</span> <span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#substr"><span class="toc-number">3.</span> <span class="toc-text">substr()</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#语法-2"><span class="toc-number">3.1.</span> <span class="toc-text">语法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#例子-2"><span class="toc-number">3.2.</span> <span class="toc-text">例子</span></a></li></ol></li></ol>
+        <a href="/2020/04/19/%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8F%82%E6%95%B0/" id="toc-header" class="mdui-ripple">文章目录</a>
+        
       </li>
     </ul>
   </div>
