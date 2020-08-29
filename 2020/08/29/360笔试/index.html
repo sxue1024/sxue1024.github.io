@@ -281,7 +281,42 @@
 <li>循环等待条件：若干进程之间形成一种头尾相接的循环等待资源关系。</li>
 </ul>
 <h4 id="4-HTML5新元素"><a href="#4-HTML5新元素" class="headerlink" title="4. HTML5新元素"></a>4. HTML5新元素</h4><p><a href="http://www.runoob.com/html/html5-new-element.html" target="_blank" rel="noopener">HTML5新元素</a></p>
-<h4 id="5-js焦点事件"><a href="#5-js焦点事件" class="headerlink" title="5. js焦点事件"></a>5. js焦点事件</h4>
+<h4 id="5-js焦点事件"><a href="#5-js焦点事件" class="headerlink" title="5. js焦点事件"></a>5. js焦点事件</h4><p>浏览器加载完毕，input的type=text对象自动获取焦点的函数为 focus()</p>
+<h4 id="6-下面哪个方法可以使对象不能删除或更改任何属性？"><a href="#6-下面哪个方法可以使对象不能删除或更改任何属性？" class="headerlink" title="6. 下面哪个方法可以使对象不能删除或更改任何属性？"></a>6. 下面哪个方法可以使对象不能删除或更改任何属性？</h4><p><code>Object.freeze()</code></p>
+<p><code>Object.isFrozen()</code>方法判断一个对象是否被冻结。</p>
+<p><code>Object.isSealed()</code> 方法判断一个对象是否被密封。</p>
+<h4 id="7-将A元素拖拽并放置到B元素中，A元素会被触发什么事件？"><a href="#7-将A元素拖拽并放置到B元素中，A元素会被触发什么事件？" class="headerlink" title="7. 将A元素拖拽并放置到B元素中，A元素会被触发什么事件？"></a>7. 将A元素拖拽并放置到B元素中，A元素会被触发什么事件？</h4><p><code>ondragstart</code></p>
+<p><a href="https://www.zhangxinxu.com/wordpress/2011/02/html5-drag-drop-%E6%8B%96%E6%8B%BD%E4%B8%8E%E6%8B%96%E6%94%BE%E7%AE%80%E4%BB%8B/" target="_blank" rel="noopener">拖拽实例</a></p>
+<p>1.<code>ondragstart</code>事件：当拖拽元素开始被拖拽的时候触发的事件，此事件作用在被拖曳元素上</p>
+<p>2.<code>ondragenter</code>事件：当拖曳元素进入目标元素的时候触发的事件，此事件作用在目标元素上</p>
+<p>3.<code>ondragover</code>事件：拖拽元素在目标元素上移动的时候触发的事件，此事件作用在目标元素上</p>
+<p>4.<code>ondrop</code>事件：被拖拽的元素在目标元素上同时鼠标放开触发的事件，此事件作用在目标元素上</p>
+<p>5.<code>ondragend</code>事件：当拖拽完成后触发的事件，此事件作用在被拖曳元素上</p>
+<h4 id="8-jQuery选择器"><a href="#8-jQuery选择器" class="headerlink" title="8.jQuery选择器"></a>8.jQuery选择器</h4><table>
+<thead>
+<tr>
+<th>选择器</th>
+<th align="left">实例</th>
+<th align="center">选取</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>:eq(index)</code></td>
+<td align="left"><code>$(&quot;ul li:eq(3)&quot;)</code></td>
+<td align="center">列表中的第四个元素（index 从 0 开始）`</td>
+</tr>
+<tr>
+<td><code>:gt(no)</code></td>
+<td align="left"><code>$(&quot;ul li:gt(3)&quot;)</code></td>
+<td align="center">列出 index 大于 3 的元素</td>
+</tr>
+<tr>
+<td><code>:lt(no)</code></td>
+<td align="left"><code>$(&quot;ul li:lt(3)&quot;)</code></td>
+<td align="center">列出index小于3的元素</td>
+</tr>
+</tbody></table>
+<h4 id="9-电子邮件是公司之间信息交流的主要方式之一，支持收信服务的协议是pop3-imap-smtp"><a href="#9-电子邮件是公司之间信息交流的主要方式之一，支持收信服务的协议是pop3-imap-smtp" class="headerlink" title="9.电子邮件是公司之间信息交流的主要方式之一，支持收信服务的协议是pop3 imap smtp"></a>9.电子邮件是公司之间信息交流的主要方式之一，支持收信服务的协议是pop3 imap smtp</h4>
   </div>
   <!--文末结束语-->
   
@@ -310,7 +345,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/08/29/360%E7%AC%94%E8%AF%95/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-CSS高度塌陷问题"><span class="toc-number">1.</span> <span class="toc-text">1. CSS高度塌陷问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-请求打开用户设备麦克风的接口："><span class="toc-number">2.</span> <span class="toc-text">2. 请求打开用户设备麦克风的接口：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-“一个对象一次只能被一个事务使用”是发生死锁的哪个条件：互斥条件。"><span class="toc-number">3.</span> <span class="toc-text">3. “一个对象一次只能被一个事务使用”是发生死锁的哪个条件：互斥条件。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-HTML5新元素"><span class="toc-number">4.</span> <span class="toc-text">4. HTML5新元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-js焦点事件"><span class="toc-number">5.</span> <span class="toc-text">5. js焦点事件</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-CSS高度塌陷问题"><span class="toc-number">1.</span> <span class="toc-text">1. CSS高度塌陷问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-请求打开用户设备麦克风的接口："><span class="toc-number">2.</span> <span class="toc-text">2. 请求打开用户设备麦克风的接口：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-“一个对象一次只能被一个事务使用”是发生死锁的哪个条件：互斥条件。"><span class="toc-number">3.</span> <span class="toc-text">3. “一个对象一次只能被一个事务使用”是发生死锁的哪个条件：互斥条件。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-HTML5新元素"><span class="toc-number">4.</span> <span class="toc-text">4. HTML5新元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-js焦点事件"><span class="toc-number">5.</span> <span class="toc-text">5. js焦点事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-下面哪个方法可以使对象不能删除或更改任何属性？"><span class="toc-number">6.</span> <span class="toc-text">6. 下面哪个方法可以使对象不能删除或更改任何属性？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-将A元素拖拽并放置到B元素中，A元素会被触发什么事件？"><span class="toc-number">7.</span> <span class="toc-text">7. 将A元素拖拽并放置到B元素中，A元素会被触发什么事件？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-jQuery选择器"><span class="toc-number">8.</span> <span class="toc-text">8.jQuery选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-电子邮件是公司之间信息交流的主要方式之一，支持收信服务的协议是pop3-imap-smtp"><span class="toc-number">9.</span> <span class="toc-text">9.电子邮件是公司之间信息交流的主要方式之一，支持收信服务的协议是pop3 imap smtp</span></a></li></ol>
       </li>
     </ul>
   </div>
