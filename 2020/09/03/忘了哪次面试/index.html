@@ -267,7 +267,7 @@
 <p>px：相对于显示器屏幕分辨率。</p>
 <h4 id="3-vh-vw作用，解决什么问题？"><a href="#3-vh-vw作用，解决什么问题？" class="headerlink" title="3. vh,vw作用，解决什么问题？"></a>3. vh,vw作用，解决什么问题？</h4><p>视口单位(Viewport units)<br>1vw=视口宽度的1%</p>
 <p>1vh=视口高度的1%</p>
-<p>vh/vw的区别<br>单位|依赖于<br>—-|:—-<br>%|元素的祖先元素<br>vh/vw|视口的尺寸</p>
+<p>vh/vw的区别<br>单位|依赖于<br>—-|:—<br>%|元素的祖先元素<br>vh/vw|视口的尺寸</p>
 <h4 id="4-用CSS隐藏页面元素"><a href="#4-用CSS隐藏页面元素" class="headerlink" title="4.用CSS隐藏页面元素"></a>4.用CSS隐藏页面元素</h4><table>
 <thead>
 <tr>
@@ -296,7 +296,21 @@
 <td align="left">只会造成本元素的重绘，性能消耗较少</td>
 </tr>
 </tbody></table>
-<h4 id="5-BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）"><a href="#5-BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）" class="headerlink" title="5.BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）"></a>5.BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）</h4>
+<h4 id="5-BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）"><a href="#5-BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）" class="headerlink" title="5.BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）"></a>5.BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）</h4><p>BFC就是块级格式上下文，是页面盒模型布局中的一种CSS渲染模式，相当于一个独立的容器，里面的元素和外部的元素互不影响。</p>
+<p>创建BFC的方式有：</p>
+<ul>
+<li>html根元素</li>
+<li>float浮动</li>
+<li>绝对定位</li>
+<li>overflow不为visible</li>
+<li>display为flex布局或者grid布局</li>
+</ul>
+<p>BFC主要的作用为：</p>
+<ul>
+<li>清除浮动</li>
+<li>防止同一BFC容器中的相邻元素间的外边距重叠问题。</li>
+</ul>
+<h4 id="6"><a href="#6" class="headerlink" title="6."></a>6.</h4>
   </div>
   <!--文末结束语-->
   
@@ -325,7 +339,7 @@
     <ul class="mdui-menu" id="toc">
       <li class="mdui-menu-item">
         <a href="/2020/09/03/%E5%BF%98%E4%BA%86%E5%93%AA%E6%AC%A1%E9%9D%A2%E8%AF%95/" id="toc-header" class="mdui-ripple">文章目录</a>
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-CSS选择器优先级"><span class="toc-number">1.</span> <span class="toc-text">1. CSS选择器优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-移动端单位rem-em-px区别"><span class="toc-number">2.</span> <span class="toc-text">2.移动端单位rem em px区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-vh-vw作用，解决什么问题？"><span class="toc-number">3.</span> <span class="toc-text">3. vh,vw作用，解决什么问题？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-用CSS隐藏页面元素"><span class="toc-number">4.</span> <span class="toc-text">4.用CSS隐藏页面元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）"><span class="toc-number">5.</span> <span class="toc-text">5.BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-CSS选择器优先级"><span class="toc-number">1.</span> <span class="toc-text">1. CSS选择器优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-移动端单位rem-em-px区别"><span class="toc-number">2.</span> <span class="toc-text">2.移动端单位rem em px区别</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-vh-vw作用，解决什么问题？"><span class="toc-number">3.</span> <span class="toc-text">3. vh,vw作用，解决什么问题？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-用CSS隐藏页面元素"><span class="toc-number">4.</span> <span class="toc-text">4.用CSS隐藏页面元素</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）"><span class="toc-number">5.</span> <span class="toc-text">5.BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6"><span class="toc-number">6.</span> <span class="toc-text">6.</span></a></li></ol>
       </li>
     </ul>
   </div>
