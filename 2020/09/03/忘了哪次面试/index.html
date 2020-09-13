@@ -197,7 +197,7 @@
     </span>
     <span>
       <span class="iconfont icon-calendar-check"></span>
-      更新于:&nbsp;2020-09-03
+      更新于:&nbsp;2020-09-13
     </span>
     <span>
       <span class="iconfont icon-folder"></span>
@@ -267,7 +267,23 @@
 <p>px：相对于显示器屏幕分辨率。</p>
 <h4 id="3-vh-vw作用，解决什么问题？"><a href="#3-vh-vw作用，解决什么问题？" class="headerlink" title="3. vh,vw作用，解决什么问题？"></a>3. vh,vw作用，解决什么问题？</h4><p>视口单位(Viewport units)<br>1vw=视口宽度的1%</p>
 <p>1vh=视口高度的1%</p>
-<p>vh/vw的区别<br>单位|依赖于<br>—-|:—<br>%|元素的祖先元素<br>vh/vw|视口的尺寸</p>
+<p>vh/vw的区别</p>
+<table>
+<thead>
+<tr>
+<th>单位</th>
+<th align="center">依赖于</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>%</td>
+<td align="center">元素的祖先元素</td>
+</tr>
+<tr>
+<td>vh/vw</td>
+<td align="center">视口的尺寸</td>
+</tr>
+</tbody></table>
 <h4 id="4-用CSS隐藏页面元素"><a href="#4-用CSS隐藏页面元素" class="headerlink" title="4.用CSS隐藏页面元素"></a>4.用CSS隐藏页面元素</h4><table>
 <thead>
 <tr>
@@ -297,7 +313,7 @@
 </tr>
 </tbody></table>
 <h4 id="5-BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）"><a href="#5-BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）" class="headerlink" title="5.BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）"></a>5.BFC盒模型怎么理解？标准盒模型和怪异盒模型（早期的IE）</h4><p>BFC就是块级格式上下文，是页面盒模型布局中的一种CSS渲染模式，相当于一个独立的容器，里面的元素和外部的元素互不影响。</p>
-<p>创建BFC的方式有：</p>
+<p>创建BFC/清除浮动的方式有：</p>
 <ul>
 <li>html根元素</li>
 <li>float浮动</li>
